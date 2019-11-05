@@ -68,26 +68,8 @@ def main(mpirank, mpisize, mpicomm):
             resdf.to_csv(f"{rootpath}/results_{args.kfold}kfold_{args.epochs}epochs_{args.onehot}onehot.csv")
 
 
-def printClassDistr(data, target, index):
-    comb = np.zeros((data[index].shape[0], data.shape[1] + 1))
-    comb[:, 0:data.shape[1]] = data[index]
-    comb[:, data.shape[1]:data.shape[1] + 1] = target[index]
-    df = pd.DataFrame(data=comb)
-    print(df.iloc[:, data.shape[1]].value_counts())
-
-
-def CVSearch(model, data, target, args, dsl):
-    my_neurons = [15, 30, 60]
-    my_epochs = [50, 100, 150]
-    my_batch_size = [5, 10]
-    my_param_grid = dict(hidden=my_neurons, epochs=my_epochs, batch_size=my_batch_size)
-
-    model2Tune = KerasClassifier(build_fn=makeANNModel(2 * data.shape[1], 1, args.hiddenlayers_gabel, dsl.isregression,
-                                           optimizer=None,
-                                           onehot=args.onehot, multigpu=args.multigpu), verbose=0)
-
 if __name__ == "__main__":
     comm = MPI.COMM_WORLD
     mpisize = comm.Get_size()
-    mpirank = comm.Get_rank() 
-    main(mpirank,mpisize,comm)
+    mpirank = comm.Get_rank()
+    main(mpirank, mpisize, comm)
