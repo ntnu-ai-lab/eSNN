@@ -15,18 +15,15 @@ paper [Learning similarity measures from data](https://link.springer.com/article
 similarity measure types according to the types given by the equation framework
 for analyzing different functions for similarity with \(\mathbb{S}\) as a
 similarity measure applied to pairs of data points
-\((\boldsymbol{x},\boldsymbol{y})\);
+(x,y);
 
-\begin{equation}
-\label{org732bc95}
-\mathbb{S}(\boldsymbol{x},\boldsymbol{y}) = C(G(\boldsymbol{x}),G(\boldsymbol{y})) ,
+S(x,y) = C(G(x),G(y)) ,
 \end{equation}
 
- where \(G(\boldsymbol{x}) = \hat{\boldsymbol{x}}\) and
-\(G(\boldsymbol{y}) = \hat{\boldsymbol{y}}\) represents embedding or information
-extraction from data points \(x\) and \(y\) , i.e. \(G(\cdot)\) highlights the parts
+ where \(G(x) = *x* and G(y) = *y* represents embedding or information
+extraction from data points x and y , i.e. G() highlights the parts
 of the data points most useful to calculate the similarity between them as
-modeled in \(C(\cdot)\). An illustration of this process can be seen in the figure
+modeled in C(x,y). An illustration of this process can be seen in the figure
 below:
 
 [![img](figs/Fig2-problem-solution-embedding-space.jpeg)](figs/Fig2-problem-solution-embedding-space.jpeg)
