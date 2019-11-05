@@ -118,7 +118,7 @@ The results should be close to [Table 2](#org4742741)
 
 <table id="org4742741" border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 <caption class="t-above"><span class="table-number">Table 2:</span> Validation retrieval loss after 200 epochs of training, in comparison to state of the art methods. \(eSNN\) has the smallest loss in \(8\) of \(14\) datasets. The best result for each dataset is highlighted in bold.</caption>
-| --------- | ---------- | ---------- | ------- | ------------ | ------------- | ------------ |
+
 |         | esnn     |   chopra | gabel | t3i1       | t1i1m       | t2i1       |
 | --------- | ---------- | ---------- | ------- | ------------ | ------------- | ------------ |
 | bal     | 0.01     | **0.00** |  0.14 |       0.10 |        0.42 |       0.81 |
@@ -135,11 +135,8 @@ The results should be close to [Table 2](#org4742741)
 | ttt     | **0.03** |     0.03 |  0.17 |       0.07 |        0.32 |       0.07 |
 | use     | **0.07** |     0.08 |  0.08 |       0.39 |        0.21 |       0.18 |
 | who     | **0.29** |     0.45 |  0.33 |       0.45 |        0.46 |       0.45 |
-| --------- | ---------- | ---------- | ------- | ------------ | ------------- | ------------ |
 | Sum     | **2.47** |     2.75 |  3.75 |       3.72 |        3.97 |       4.17 |
-| --------- | ---------- | ---------- | ------- | ------------ | ------------- | ------------ |
 | Average | **0.18** |     0.20 |  0.27 |       0.27 |        0.28 |       0.30 |
-| --------- | ---------- | ---------- | ------- | ------------ | ------------- | ------------ |
 
 
 <a id="org76a4497"></a>
@@ -156,7 +153,7 @@ The results should be close to [Table 2](#org80b72f6)
 
 <table id="org80b72f6" border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 <caption class="t-above"><span class="table-number">Table 3:</span> Validation retrieval loss after 2000 epochs of training, in comparison to state of the art methods. \(eSNN\) has the smallest validation retrieval loss in \(6\) of \(14\) datasets in addition to the lowest average loss. The best result for each dataset is highlighted in bold.</caption>
-| -------- | -------- | -------- | -------- | -------- | -------- | ----- |
+
 |         | esnn     |   chopra |    gabel |     t3i1 |     t1i1 | t2i1 |
 | -------- | -------- | -------- | -------- | -------- | -------- | ----- |
 | bal     | 0.02     | **0.00** |     0.08 |     0.01 |     0.43 | 0.83 |
@@ -173,11 +170,9 @@ The results should be close to [Table 2](#org80b72f6)
 | ttt     | **0.03** | **0.03** |     0.07 | **0.03** |     0.32 | 0.08 |
 | use     | 0.08     |     0.10 | **0.07** |     0.08 |     0.18 | 0.16 |
 | who     | 0.30     |     0.46 | **0.29** |     0.43 |     0.47 | 0.45 |
-| -------- | -------- | -------- | -------- | -------- | -------- | ----- |
 | Sum     | **2.45** |     2.81 |     2.74 |     2.62 |     3.95 | 4.14 |
-| -------- | -------- | -------- | -------- | -------- | -------- | ----- |
 | Average | **0.18** |     0.20 |     0.20 |     0.19 |     0.28 | 0.30 |
-| -------- | -------- | -------- | -------- | -------- | -------- | ----- |
+
 
 
 <a id="org5595463"></a>
