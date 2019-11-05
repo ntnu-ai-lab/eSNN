@@ -18,7 +18,6 @@ similarity measure applied to pairs of data points
 (x,y);
 
 S(x,y) = C(G(x),G(y)) ,
-\end{equation}
 
  where G(x) = *x* and G(y) = *y* represents embedding or information
 extraction from data points x and y , i.e. G() highlights the parts
