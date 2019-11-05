@@ -36,15 +36,13 @@ The different types of similarity measures can then be listed:
 <table id="orgd6c9fca" border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 <caption class="t-above"><span class="table-number">Table 1:</span> Table showing different types of similarity measures in our proposed framework.</caption>
 
-|-------------------- | ------- | ---------------------------------- | --------|
+
 |                     |         | C(x,y)                             |         |
-|-------------------- | ------- | ---------------------------------- | --------|
+| -------------------- | ------- | ---------------------------------- | -------- |
 |                     |         | Modeled                            | Learned |
-|-------------------- | ------- | ---------------------------------- | --------|
-| $G(\boldsymbol{x})$ | Modeled | Type 1                             | Type 2  |
-|-------------------- | ------- | ---------------------------------- | --------|
+| G(x)    | Modeled | Type 1                             | Type 2  |
 |                     | Learned | Type 3                             | Type 4  |
-|-------------------- | ------- | ---------------------------------- | --------|
+
 # Install
 
 
