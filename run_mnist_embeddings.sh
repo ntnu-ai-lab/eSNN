@@ -1,0 +1,2 @@
+#!/bin/bash
+python ./plotembeddings.py --resultdir mnistembeddings2019_08_02_00_49_03 --savedir mnistembeddings --filename mnistembeddings-all --seed 42 --c 0,1,2,3,4,5,6,7,8,9 --removeoptimizer True --font_scale 0.8 --split 5 --modelfiles mnistembeddings2019_08_02_00_49_03/4/esnnname-of-model-309.h5,mnistembeddings2019_08_02_00_49_03/4/chopraname-of-model-499.h5  --hue_order eSNN --maxdatapoints 600 --doeval True

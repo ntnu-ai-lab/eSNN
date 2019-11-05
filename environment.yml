@@ -1,0 +1,19 @@
+name: esnn
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - keras = 2.2.4
+  - requests-cache
+  - pandas
+  - requests
+  - scikit-learn
+  - matplotlib
+  - pandas-datareader=0.8.0
+  - xlrd
+  - tensorflow-gpu<2.0
+  - seaborn
+  - tensorflow<2.0
+  - pip
+  - pip:
+      - sklearn-pandas
