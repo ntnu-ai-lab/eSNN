@@ -13,14 +13,14 @@
 This repository contains the code for doing the experiments described in the
 paper [Learning similarity measures from data](https://link.springer.com/article/10.1007/s13748-019-00201-2) where we evaluate different
 similarity measure types according to the types given by the equation framework
-for analyzing different functions for similarity with \(\mathbb{S}\) as a
+for analyzing different functions for similarity with S(x,y) as a
 similarity measure applied to pairs of data points
 (x,y);
 
 S(x,y) = C(G(x),G(y)) ,
 \end{equation}
 
- where \(G(x) = *x* and G(y) = *y* represents embedding or information
+ where G(x) = *x* and G(y) = *y* represents embedding or information
 extraction from data points x and y , i.e. G() highlights the parts
 of the data points most useful to calculate the similarity between them as
 modeled in C(x,y). An illustration of this process can be seen in the figure
@@ -112,7 +112,7 @@ or specify the parameters yourself.
 The results should be close to [Table 2](#org4742741)
 
 <table id="org4742741" border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
-<caption class="t-above"><span class="table-number">Table 2:</span> Validation retrieval loss after 200 epochs of training, in comparison to state of the art methods. \(eSNN\) has the smallest loss in \(8\) of \(14\) datasets. The best result for each dataset is highlighted in bold.</caption>
+<caption class="t-above"><span class="table-number">Table 2:</span> Validation retrieval loss after 200 epochs of training, in comparison to state of the art methods. eSNN has the smallest loss in 8 of 14 datasets. The best result for each dataset is highlighted in bold.</caption>
 
 |         | esnn     |   chopra | gabel | t3i1       | t1i1m       | t2i1       |
 | --------- | ---------- | ---------- | ------- | ------------ | ------------- | ------------ |
@@ -147,7 +147,7 @@ or specify the parameters yourself.
 The results should be close to [Table 2](#org80b72f6)
 
 <table id="org80b72f6" border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
-<caption class="t-above"><span class="table-number">Table 3:</span> Validation retrieval loss after 2000 epochs of training, in comparison to state of the art methods. \(eSNN\) has the smallest validation retrieval loss in \(6\) of \(14\) datasets in addition to the lowest average loss. The best result for each dataset is highlighted in bold.</caption>
+<caption class="t-above"><span class="table-number">Table 3:</span> Validation retrieval loss after 2000 epochs of training, in comparison to state of the art methods. eSNN has the smallest validation retrieval loss in 6 of 14 datasets in addition to the lowest average loss. The best result for each dataset is highlighted in bold.</caption>
 
 |         | esnn     |   chopra |    gabel |     t3i1 |     t1i1 | t2i1 |
 | -------- | -------- | -------- | -------- | -------- | -------- | ----- |
@@ -206,4 +206,3 @@ Please cite [our paper](https://doi.org/10.1007/s13748-019-00201-2) if you use c
       doi="10.1007/s13748-019-00201-2",
       url="https://doi.org/10.1007/s13748-019-00201-2"
     }
-
