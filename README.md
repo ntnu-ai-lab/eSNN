@@ -29,68 +29,22 @@ of the data points most useful to calculate the similarity between them as
 modeled in \(C(\cdot)\). An illustration of this process can be seen in the figure
 below:
 
-[![img](/home/epic/research/experiments/annSimilarity/figs/Fig2-problem-solution-embedding-space.jpeg)](figs/Fig2-problem-solution-embedding-space.jpeg)
+[![img](figs/Fig2-problem-solution-embedding-space.jpeg)](figs/Fig2-problem-solution-embedding-space.jpeg)
 
 The different types of similarity measures can then be listed:
 
 <table id="orgd6c9fca" border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 <caption class="t-above"><span class="table-number">Table 1:</span> Table showing different types of similarity measures in our proposed framework.</caption>
 
-<colgroup>
-<col  class="org-left" />
-</colgroup>
-
-<colgroup>
-<col  class="org-left" />
-</colgroup>
-
-<colgroup>
-<col  class="org-left" />
-</colgroup>
-
-<colgroup>
-<col  class="org-left" />
-</colgroup>
-<thead>
-<tr>
-<th scope="col" class="org-left">&#xa0;</th>
-<th scope="col" class="org-left">&#xa0;</th>
-<th scope="col" class="org-left">\(C(\boldsymbol{x},\boldsymbol{y})\)</th>
-<th scope="col" class="org-left">&#xa0;</th>
-</tr>
-</thead>
-
-<tbody>
-<tr>
-<td class="org-left">&#xa0;</td>
-<td class="org-left">&#xa0;</td>
-<td class="org-left">Modeled</td>
-<td class="org-left">Learned</td>
-</tr>
-</tbody>
-
-<tbody>
-<tr>
-<td class="org-left">\(G(\boldsymbol{x})\)</td>
-<td class="org-left">Modeled</td>
-<td class="org-left">Type 1</td>
-<td class="org-left">Type 2</td>
-</tr>
-</tbody>
-
-<tbody>
-<tr>
-<td class="org-left">&#xa0;</td>
-<td class="org-left">Learned</td>
-<td class="org-left">Type 3</td>
-<td class="org-left">Type 4</td>
-</tr>
-</tbody>
-</table>
-
-
-<a id="org226f664"></a>
-
+|-------------------- | ------- | ---------------------------------- | --------|
+|                     |         | C(x,y)                             |         |
+|-------------------- | ------- | ---------------------------------- | --------|
+|                     |         | Modeled                            | Learned |
+|-------------------- | ------- | ---------------------------------- | --------|
+| $G(\boldsymbol{x})$ | Modeled | Type 1                             | Type 2  |
+|-------------------- | ------- | ---------------------------------- | --------|
+|                     | Learned | Type 3                             | Type 4  |
+|-------------------- | ------- | ---------------------------------- | --------|
 # Install
 
 
@@ -105,9 +59,7 @@ Python requirements:
 
 -   Keras = 2.2.4
 -   Tensorflow < 2.0
-
-(- Tensorflow-gpu < 2.0)
-
+-   (Tensorflow-gpu < 2.0)
 -   Seaborn
 -   requests-cache (to cache UCI ML repo datasets)
 -   pandas
@@ -166,213 +118,29 @@ The results should be close to [Table 2](#org4742741)
 
 <table id="org4742741" border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 <caption class="t-above"><span class="table-number">Table 2:</span> Validation retrieval loss after 200 epochs of training, in comparison to state of the art methods. \(eSNN\) has the smallest loss in \(8\) of \(14\) datasets. The best result for each dataset is highlighted in bold.</caption>
-
-<colgroup>
-<col  class="org-left" />
-
-<col  class="org-left" />
-
-<col  class="org-right" />
-
-<col  class="org-right" />
-
-<col  class="org-right" />
-
-<col  class="org-right" />
-
-<col  class="org-right" />
-</colgroup>
-<thead>
-<tr>
-<th scope="col" class="org-left">&#xa0;</th>
-<th scope="col" class="org-left">\(eSNN\)</th>
-<th scope="col" class="org-right">\(chopra\)</th>
-<th scope="col" class="org-right">\(gabel\)</th>
-<th scope="col" class="org-right">\(t_{3,1}\)</th>
-<th scope="col" class="org-right">\(t_{1,1}\)</th>
-<th scope="col" class="org-right">\(t_{2,1}\)</th>
-</tr>
-</thead>
-
-<tbody>
-<tr>
-<td class="org-left">bal</td>
-<td class="org-left">0.01</td>
-<td class="org-right">**0.00**</td>
-<td class="org-right">0.14</td>
-<td class="org-right">0.10</td>
-<td class="org-right">0.42</td>
-<td class="org-right">0.81</td>
-</tr>
-
-
-<tr>
-<td class="org-left">car</td>
-<td class="org-left">0.04</td>
-<td class="org-right">**0.02**</td>
-<td class="org-right">0.19</td>
-<td class="org-right">0.16</td>
-<td class="org-right">0.25</td>
-<td class="org-right">0.25</td>
-</tr>
-
-
-<tr>
-<td class="org-left">cmc</td>
-<td class="org-left">**0.52**</td>
-<td class="org-right">0.53</td>
-<td class="org-right">0.54</td>
-<td class="org-right">0.55</td>
-<td class="org-right">0.54</td>
-<td class="org-right">0.58</td>
-</tr>
-
-
-<tr>
-<td class="org-left">eco</td>
-<td class="org-left">0.22</td>
-<td class="org-right">**0.20**</td>
-<td class="org-right">0.46</td>
-<td class="org-right">0.35</td>
-<td class="org-right">0.21</td>
-<td class="org-right">0.22</td>
-</tr>
-
-
-<tr>
-<td class="org-left">glass</td>
-<td class="org-left">0.08</td>
-<td class="org-right">0.08</td>
-<td class="org-right">0.12</td>
-<td class="org-right">0.10</td>
-<td class="org-right">**0.06**</td>
-<td class="org-right">0.07</td>
-</tr>
-
-
-<tr>
-<td class="org-left">hay</td>
-<td class="org-left">0.19</td>
-<td class="org-right">0.21</td>
-<td class="org-right">0.26</td>
-<td class="org-right">**0.17**</td>
-<td class="org-right">0.33</td>
-<td class="org-right">0.37</td>
-</tr>
-
-
-<tr>
-<td class="org-left">heart</td>
-<td class="org-left">**0.21**</td>
-<td class="org-right">0.24</td>
-<td class="org-right">0.28</td>
-<td class="org-right">0.24</td>
-<td class="org-right">0.24</td>
-<td class="org-right">0.23</td>
-</tr>
-
-
-<tr>
-<td class="org-left">iris</td>
-<td class="org-left">0.04</td>
-<td class="org-right">**0.03**</td>
-<td class="org-right">0.18</td>
-<td class="org-right">0.07</td>
-<td class="org-right">0.05</td>
-<td class="org-right">0.04</td>
-</tr>
-
-
-<tr>
-<td class="org-left">mam</td>
-<td class="org-left">**0.21**</td>
-<td class="org-right">0.25</td>
-<td class="org-right">0.26</td>
-<td class="org-right">0.27</td>
-<td class="org-right">0.28</td>
-<td class="org-right">0.29</td>
-</tr>
-
-
-<tr>
-<td class="org-left">mon</td>
-<td class="org-left">**0.28**</td>
-<td class="org-right">0.33</td>
-<td class="org-right">0.39</td>
-<td class="org-right">0.45</td>
-<td class="org-right">0.29</td>
-<td class="org-right">0.29</td>
-</tr>
-
-
-<tr>
-<td class="org-left">pim</td>
-<td class="org-left">**0.28**</td>
-<td class="org-right">0.30</td>
-<td class="org-right">0.35</td>
-<td class="org-right">0.35</td>
-<td class="org-right">0.31</td>
-<td class="org-right">0.32</td>
-</tr>
-
-
-<tr>
-<td class="org-left">ttt</td>
-<td class="org-left">**0.03**</td>
-<td class="org-right">0.03</td>
-<td class="org-right">0.17</td>
-<td class="org-right">0.07</td>
-<td class="org-right">0.32</td>
-<td class="org-right">0.07</td>
-</tr>
-
-
-<tr>
-<td class="org-left">use</td>
-<td class="org-left">**0.07**</td>
-<td class="org-right">0.08</td>
-<td class="org-right">0.08</td>
-<td class="org-right">0.39</td>
-<td class="org-right">0.21</td>
-<td class="org-right">0.18</td>
-</tr>
-
-
-<tr>
-<td class="org-left">who</td>
-<td class="org-left">**0.29**</td>
-<td class="org-right">0.45</td>
-<td class="org-right">0.33</td>
-<td class="org-right">0.45</td>
-<td class="org-right">0.46</td>
-<td class="org-right">0.45</td>
-</tr>
-</tbody>
-
-<tbody>
-<tr>
-<td class="org-left">Sum</td>
-<td class="org-left">**2.47**</td>
-<td class="org-right">2.75</td>
-<td class="org-right">3.75</td>
-<td class="org-right">3.72</td>
-<td class="org-right">3.97</td>
-<td class="org-right">4.17</td>
-</tr>
-</tbody>
-
-<tbody>
-<tr>
-<td class="org-left">Average</td>
-<td class="org-left">**0.18**</td>
-<td class="org-right">0.20</td>
-<td class="org-right">0.27</td>
-<td class="org-right">0.27</td>
-<td class="org-right">0.28</td>
-<td class="org-right">0.30</td>
-</tr>
-</tbody>
-</table>
+|---------|----------|----------|-------|------------|-------------|------------|
+|         | esnn     |   chopra | gabel | t3i1       | t1i1m       | t2i1       |
+|---------|----------|----------|-------|------------|-------------|------------|
+|---------|----------|----------|-------|------------|-------------|------------|
+| bal     | 0.01     | **0.00** |  0.14 |       0.10 |        0.42 |       0.81 |
+| car     | 0.04     | **0.02** |  0.19 |       0.16 |        0.25 |       0.25 |
+| cmc     | **0.52** |     0.53 |  0.54 |       0.55 |        0.54 |       0.58 |
+| eco     | 0.22     | **0.20** |  0.46 |       0.35 |        0.21 |       0.22 |
+| glass   | 0.08     |     0.08 |  0.12 |       0.10 |    **0.06** |       0.07 |
+| hay     | 0.19     |     0.21 |  0.26 |   **0.17** |        0.33 |       0.37 |
+| heart   | **0.21** |     0.24 |  0.28 |       0.24 |        0.24 |       0.23 |
+| iris    | 0.04     | **0.03** |  0.18 |       0.07 |        0.05 |       0.04 |
+| mam     | **0.21** |     0.25 |  0.26 |       0.27 |        0.28 |       0.29 |
+| mon     | **0.28** |     0.33 |  0.39 |       0.45 |        0.29 |       0.29 |
+| pim     | **0.28** |     0.30 |  0.35 |       0.35 |        0.31 |       0.32 |
+| ttt     | **0.03** |     0.03 |  0.17 |       0.07 |        0.32 |       0.07 |
+| use     | **0.07** |     0.08 |  0.08 |       0.39 |        0.21 |       0.18 |
+| who     | **0.29** |     0.45 |  0.33 |       0.45 |        0.46 |       0.45 |
+|---------|----------|----------|-------|------------|-------------|------------|
+| Sum     | **2.47** |     2.75 |  3.75 |       3.72 |        3.97 |       4.17 |
+|---------|----------|----------|-------|------------|-------------|------------|
+| Average | **0.18** |     0.20 |  0.27 |       0.27 |        0.28 |       0.30 |
+|---------|----------|----------|-------|------------|-------------|------------|
 
 
 <a id="org76a4497"></a>
@@ -389,213 +157,29 @@ The results should be close to [Table 2](#org80b72f6)
 
 <table id="org80b72f6" border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 <caption class="t-above"><span class="table-number">Table 3:</span> Validation retrieval loss after 2000 epochs of training, in comparison to state of the art methods. \(eSNN\) has the smallest validation retrieval loss in \(6\) of \(14\) datasets in addition to the lowest average loss. The best result for each dataset is highlighted in bold.</caption>
-
-<colgroup>
-<col  class="org-left" />
-
-<col  class="org-left" />
-
-<col  class="org-right" />
-
-<col  class="org-right" />
-
-<col  class="org-right" />
-
-<col  class="org-right" />
-
-<col  class="org-right" />
-</colgroup>
-<thead>
-<tr>
-<th scope="col" class="org-left">&#xa0;</th>
-<th scope="col" class="org-left">\(eSNN\)</th>
-<th scope="col" class="org-right">\(chopra\)</th>
-<th scope="col" class="org-right">\(gabel\)</th>
-<th scope="col" class="org-right">\(t_{3,1}\)</th>
-<th scope="col" class="org-right">t<sub>1,1</sub></th>
-<th scope="col" class="org-right">\(t_{2,1}\)</th>
-</tr>
-</thead>
-
-<tbody>
-<tr>
-<td class="org-left">bal</td>
-<td class="org-left">0.02</td>
-<td class="org-right">**0.00**</td>
-<td class="org-right">0.08</td>
-<td class="org-right">0.01</td>
-<td class="org-right">0.43</td>
-<td class="org-right">0.83</td>
-</tr>
-
-
-<tr>
-<td class="org-left">car</td>
-<td class="org-left">**0.01**</td>
-<td class="org-right">**0.01**</td>
-<td class="org-right">0.06</td>
-<td class="org-right">0.02</td>
-<td class="org-right">0.24</td>
-<td class="org-right">0.24</td>
-</tr>
-
-
-<tr>
-<td class="org-left">cmc</td>
-<td class="org-left">**0.52**</td>
-<td class="org-right">0.53</td>
-<td class="org-right">0.54</td>
-<td class="org-right">0.53</td>
-<td class="org-right">0.54</td>
-<td class="org-right">0.58</td>
-</tr>
-
-
-<tr>
-<td class="org-left">eco</td>
-<td class="org-left">0.22</td>
-<td class="org-right">0.20</td>
-<td class="org-right">0.22</td>
-<td class="org-right">**0.18**</td>
-<td class="org-right">0.19</td>
-<td class="org-right">0.21</td>
-</tr>
-
-
-<tr>
-<td class="org-left">glass</td>
-<td class="org-left">0.06</td>
-<td class="org-right">0.07</td>
-<td class="org-right">0.08</td>
-<td class="org-right">0.09</td>
-<td class="org-right">**0.05**</td>
-<td class="org-right">0.06</td>
-</tr>
-
-
-<tr>
-<td class="org-left">hay</td>
-<td class="org-left">0.18</td>
-<td class="org-right">0.21</td>
-<td class="org-right">0.20</td>
-<td class="org-right">**0.15**</td>
-<td class="org-right">0.32</td>
-<td class="org-right">0.34</td>
-</tr>
-
-
-<tr>
-<td class="org-left">heart</td>
-<td class="org-left">**0.21**</td>
-<td class="org-right">0.27</td>
-<td class="org-right">0.23</td>
-<td class="org-right">0.22</td>
-<td class="org-right">0.24</td>
-<td class="org-right">0.23</td>
-</tr>
-
-
-<tr>
-<td class="org-left">iris</td>
-<td class="org-left">0.08</td>
-<td class="org-right">0.05</td>
-<td class="org-right">0.07</td>
-<td class="org-right">**0.04**</td>
-<td class="org-right">0.06</td>
-<td class="org-right">0.05</td>
-</tr>
-
-
-<tr>
-<td class="org-left">mam</td>
-<td class="org-left">**0.21**</td>
-<td class="org-right">0.27</td>
-<td class="org-right">0.25</td>
-<td class="org-right">0.27</td>
-<td class="org-right">0.29</td>
-<td class="org-right">0.28</td>
-</tr>
-
-
-<tr>
-<td class="org-left">mon</td>
-<td class="org-left">**0.26**</td>
-<td class="org-right">0.30</td>
-<td class="org-right">0.33</td>
-<td class="org-right">0.27</td>
-<td class="org-right">0.32</td>
-<td class="org-right">0.32</td>
-</tr>
-
-
-<tr>
-<td class="org-left">pim</td>
-<td class="org-left">0.27</td>
-<td class="org-right">0.31</td>
-<td class="org-right">**0.25**</td>
-<td class="org-right">0.30</td>
-<td class="org-right">0.30</td>
-<td class="org-right">0.31</td>
-</tr>
-
-
-<tr>
-<td class="org-left">ttt</td>
-<td class="org-left">**0.03**</td>
-<td class="org-right">**0.03**</td>
-<td class="org-right">0.07</td>
-<td class="org-right">**0.03**</td>
-<td class="org-right">0.32</td>
-<td class="org-right">0.08</td>
-</tr>
-
-
-<tr>
-<td class="org-left">use</td>
-<td class="org-left">0.08</td>
-<td class="org-right">0.10</td>
-<td class="org-right">**0.07**</td>
-<td class="org-right">0.08</td>
-<td class="org-right">0.18</td>
-<td class="org-right">0.16</td>
-</tr>
-
-
-<tr>
-<td class="org-left">who</td>
-<td class="org-left">0.30</td>
-<td class="org-right">0.46</td>
-<td class="org-right">**0.29**</td>
-<td class="org-right">0.43</td>
-<td class="org-right">0.47</td>
-<td class="org-right">0.45</td>
-</tr>
-</tbody>
-
-<tbody>
-<tr>
-<td class="org-left">Sum</td>
-<td class="org-left">**2.45**</td>
-<td class="org-right">2.81</td>
-<td class="org-right">2.74</td>
-<td class="org-right">2.62</td>
-<td class="org-right">3.95</td>
-<td class="org-right">4.14</td>
-</tr>
-</tbody>
-
-<tbody>
-<tr>
-<td class="org-left">Average</td>
-<td class="org-left">**0.18**</td>
-<td class="org-right">0.20</td>
-<td class="org-right">0.20</td>
-<td class="org-right">0.19</td>
-<td class="org-right">0.28</td>
-<td class="org-right">0.30</td>
-</tr>
-</tbody>
-</table>
+|-------- | ---------- | ------------ | ----------- | ---------- | ---------- | -----------|
+|         | {{{esnn}}} | {{{chopra}}} | {{{gabel}}} | {{{t3i1}}} | {{{t1i1}}} | {{{t2i1}}} |
+|-------- | ---------- | ------------ | ----------- | ---------- | ---------- | -----------|
+|-------- | ---------- | ------------ | ----------- | ---------- | ---------- | -----------|
+| bal     | 0.02       |     **0.00** |        0.08 |       0.01 |       0.43 |       0.83 |
+| car     | **0.01**   |     **0.01** |        0.06 |       0.02 |       0.24 |       0.24 |
+| cmc     | **0.52**   |         0.53 |        0.54 |       0.53 |       0.54 |       0.58 |
+| eco     | 0.22       |         0.20 |        0.22 |   **0.18** |       0.19 |       0.21 |
+| glass   | 0.06       |         0.07 |        0.08 |       0.09 |   **0.05** |       0.06 |
+| hay     | 0.18       |         0.21 |        0.20 |   **0.15** |       0.32 |       0.34 |
+| heart   | **0.21**   |         0.27 |        0.23 |       0.22 |       0.24 |       0.23 |
+| iris    | 0.08       |         0.05 |        0.07 |   **0.04** |       0.06 |       0.05 |
+| mam     | **0.21**   |         0.27 |        0.25 |       0.27 |       0.29 |       0.28 |
+| mon     | **0.26**   |         0.30 |        0.33 |       0.27 |       0.32 |       0.32 |
+| pim     | 0.27       |         0.31 |    **0.25** |       0.30 |       0.30 |       0.31 |
+| ttt     | **0.03**   |     **0.03** |        0.07 |   **0.03** |       0.32 |       0.08 |
+| use     | 0.08       |         0.10 |    **0.07** |       0.08 |       0.18 |       0.16 |
+| who     | 0.30       |         0.46 |    **0.29** |       0.43 |       0.47 |       0.45 |
+|-------- | ---------- | ------------ | ----------- | ---------- | ---------- | -----------|
+| Sum     | **2.45**   |         2.81 |        2.74 |       2.62 |       3.95 |       4.14 |
+|-------- | ---------- | ------------ | ----------- | ---------- | ---------- | -----------|
+| Average | **0.18**   |         0.20 |        0.20 |       0.19 |       0.28 |       0.30 |
+|-------- | ---------- | ------------ | ----------- | ---------- | ---------- | -----------|
 
 
 <a id="org5595463"></a>
